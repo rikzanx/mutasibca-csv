@@ -1,10 +1,14 @@
+"""
+    Author: rikzan
+    This code convert form to csv BCA
+    """
 import csv
 import pandas as pd
 
 datetahun="/2022"
-csv_name = "agust2022.csv"
+csv_name = "example2.csv"
 result = []
-with open('agust.csv') as csv_file:
+with open('example2.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
     for row in csv_reader:

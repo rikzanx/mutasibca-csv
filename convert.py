@@ -1,3 +1,7 @@
+"""
+    Author: rikzan
+    This code convert form txt to csv BCA
+    """
 import xdrlib
 from re import sub
 import re
@@ -7,12 +11,6 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 def is_date(string, fuzzy=False):
-    """
-    Return whether the string can be interpreted as a date.
-
-    :param string: str, string to check for date
-    :param fuzzy: bool, ignore unknown tokens in string if True
-    """
     try: 
         # parse(string, fuzzy=fuzzy
         date_time_obj = datetime.strptime(string, '%d/%m')
@@ -21,8 +19,8 @@ def is_date(string, fuzzy=False):
     except:
         return False
 datetahun="/2022"
-f = open("aprjul2022.txt", "r")
-csv_name = "aprjul2022.csv"
+f = open("example.txt", "r")
+csv_name = "example.csv"
 # print("{:.2f}".format(float("1573216.38")))
 # print(f.readline(1))
 # deleted = re.match(r'\d+(?:[.]\d{2})?$', '40.12')
